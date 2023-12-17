@@ -1,4 +1,4 @@
-# Devoir de M2 DEFI - Data Visualisation (Océane GUERIN)
+# Devoir de M2 DEFI - Data Visualisation
 ## Présentation du sujet
 ## Jeu de données 
 ### Sanity check
