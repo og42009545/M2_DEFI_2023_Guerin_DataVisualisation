@@ -61,12 +61,20 @@ Je réalise un contrôle qualité allégé (10 points) de ce jeu de données.
 
 # Nettoyage et enrichissement des données
 ## Nettoyage via OpenRefine 
+
+Je vais procéder au data-wrangling de mon fichier contestants.csv via OpenRefine.
+
 ## Enrichissement via WikiData
 
 # Visualisations et editorialisations
-## Première visualisation
-## Deuxième visualisation
-## Troisième visualisation
+## L'Eurovision en bref
+### Les victoires par pays
+### La France à l'Eurovision
+
+
+## Comment ganger à l'Eurovision ?
+### Zoom sur les dix derniers gagnants (2012-2023)
+### Exploration de différentes pistes (le genre, la langue, artiste solo/groupe etc.)
 
 # Conclusion
 # Sources
