@@ -13,11 +13,10 @@ J'ai décidé de travailler sur le **concours de l'Eurovision** (version adulte)
 ![Photo de Slimane, représentant de la France pour le concours de l'Eurovision en 2024](/images/Eurovision_2024_France_Slimane_MonAmour.jpg)
 *Slimane, représentant de la France pour le concours de l'Eurovision en 2024*
 
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=bal8oESDH7s"><img src="https://img.youtube.com/vi/bal8oESDH7s/0.jpg" alt="Clip officiel de la chanson "Mon Amour" de Slimane" width="1000"></a>
-</div>
+[![Clip officiel de la chanson "Mon Amour" de Slimane](https://img.youtube.com/vi/bal8oESDH7s/0.jpg)](https://www.youtube.com/watch?v=bal8oESDH7s)
 
 *Clip officiel de la chanson "Mon Amour" de Slimane*
+
 
 # Collecte des données
 ## Jeu de données utilisé
