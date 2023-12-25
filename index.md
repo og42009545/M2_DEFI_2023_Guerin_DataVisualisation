@@ -17,9 +17,20 @@ J'ai décidé de travailler sur le **concours de l'Eurovision** (version adulte)
 
 *Clip officiel de la chanson "Mon Amour" de Slimane*
 
-
 # Collecte des données
 ## Jeu de données utilisé
+Pour ce sujet, j'ai décidé de m'appuyer sur le jeu de données de l'utilisatrice GitHub **Spijkervet** qui propose dans un repository *eurovision-dataset* un ensemble de données concernant le concours de 1956 à 2023.
+
+J'ai décidé de me concentrer sur **la release de 2023**, la plus à jour. Je n'ai gardé que le fichier **contestants.csv**.
+
+**Pourquoi?**
+Ce qui m'intéresse c'est d'évaluer les chances de Slimane au concours et donc pour cela, il me faut comparer notre représentant et notre chanson avec les autres participants (*contestants*). Mon but va être de voir ce qui fonctionne mieux à l'Eurovision en analysant notamment les vainqueurs pour voir si notre représentant et notre chanson rentrent dans les critères.
+
+### Liens :
+* Source du repository : https://github.com/Spijkervet/eurovision-dataset
+* Source du fichier contestants.csv : https://github.com/Spijkervet/eurovision-dataset/releases
+
+
 ## Sanity check du jeu de données
 
 # Nettoyage et enrichissement des données
