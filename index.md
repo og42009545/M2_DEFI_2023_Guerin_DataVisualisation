@@ -30,8 +30,8 @@ Ce qui m'intéresse c'est d'évaluer les chances de Slimane au concours et donc 
 J'ajouterai des informations via WIKIDATA (par exemple, géolocalisation des pays).
 
 ### Liens :
-* Source du repository : https://github.com/Spijkervet/eurovision-dataset
-* Source du fichier contestants.csv : https://github.com/Spijkervet/eurovision-dataset/releases
+* Source du repository : https://github.com/Spijkervet/eurovision-dataset/
+* Source du fichier contestants.csv : https://github.com/Spijkervet/eurovision-dataset/releases/
 
 *Remarque* : Le fichier contestants.csv peut être trouvé [également au sein de ce projet](/sources/contestants.csv).
 
@@ -55,8 +55,8 @@ Je réalise un contrôle qualité allégé (10 points) de ce jeu de données.
 ***Tableau** : Contrôle qualité du jeu de données contestants.csv*
 
 ### Liens :
-* Source du readme du repository : https://github.com/Spijkervet/eurovision-dataset?tab=readme-ov-file#data-description
-
+* Source du readme du repository : https://github.com/Spijkervet/eurovision-dataset?tab=readme-ov-file#data-description/
+* Source du contrôle qualité [au format PDF](/autres/M2_DEFI_2023_Guerin_SprintQualite.pdf).
 
 
 # Nettoyage et enrichissement des données
@@ -69,3 +69,4 @@ Je réalise un contrôle qualité allégé (10 points) de ce jeu de données.
 ## Troisième visualisation
 
 # Conclusion
+# Sources
