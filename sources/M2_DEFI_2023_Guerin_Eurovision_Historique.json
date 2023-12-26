@@ -1,0 +1,1726 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "to_country_id",
+    "description": "Remove column to_country_id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "points_jury_sf",
+    "description": "Remove column points_jury_sf"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "points_tele_sf",
+    "description": "Remove column points_tele_sf"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "points_sf",
+    "description": "Remove column points_sf"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "place_sf",
+    "description": "Remove column place_sf"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "sf_num",
+    "description": "Remove column sf_num"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "running_sf",
+    "description": "Remove column running_sf"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "lyricists",
+    "description": "Remove column lyricists"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "composers",
+    "description": "Remove column composers"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "to_country",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "to_country_wikidata",
+    "columnInsertIndex": 2,
+    "description": "Create column to_country_wikidata at index 2 based on column to_country using expression grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q6256",
+        "name": "country"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column to_country_wikidata to type Q6256"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Switzerland",
+    "judgment": "matched",
+    "match": {
+      "id": "Q39",
+      "name": "Switzerland",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q7275",
+        "Q123480",
+        "Q170156",
+        "Q43702",
+        "Q113489728",
+        "Q687554",
+        "Q206696"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Switzerland (Q39) for cells containing \"Switzerland\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Netherlands",
+    "judgment": "matched",
+    "match": {
+      "id": "Q55",
+      "name": "Netherlands",
+      "types": [
+        "Q15304003",
+        "Q6256"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Netherlands (Q55) for cells containing \"Netherlands\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Ireland",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27",
+      "name": "Republic of Ireland",
+      "types": [
+        "Q3624078",
+        "Q112099",
+        "Q6256",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Republic of Ireland (Q27) for cells containing \"Ireland\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "France",
+    "judgment": "matched",
+    "match": {
+      "id": "Q142",
+      "name": "France",
+      "types": [
+        "Q3624078",
+        "Q7270",
+        "Q6256",
+        "Q20181813",
+        "Q51576574",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item France (Q142) for cells containing \"France\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Italy",
+    "judgment": "matched",
+    "match": {
+      "id": "Q38",
+      "name": "Italy",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q619610",
+        "Q179164",
+        "Q7270",
+        "Q51576574",
+        "Q185145",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Italy (Q38) for cells containing \"Italy\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Germany",
+    "judgment": "matched",
+    "match": {
+      "id": "Q183",
+      "name": "Germany",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q619610",
+        "Q4209223",
+        "Q63791824",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Germany (Q183) for cells containing \"Germany\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Denmark",
+    "judgment": "matched",
+    "match": {
+      "id": "Q35",
+      "name": "Denmark",
+      "types": [
+        "Q7275",
+        "Q20181813",
+        "Q66724388",
+        "Q63791824",
+        "Q6256"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Denmark (Q35) for cells containing \"Denmark\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "United Kingdom",
+    "judgment": "matched",
+    "match": {
+      "id": "Q145",
+      "name": "United Kingdom",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q20181813",
+        "Q1250464",
+        "Q202686",
+        "Q112099",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item United Kingdom (Q145) for cells containing \"United Kingdom\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Austria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q40",
+      "name": "Austria",
+      "types": [
+        "Q3624078",
+        "Q7270",
+        "Q4209223",
+        "Q123480",
+        "Q6256",
+        "Q7275",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Austria (Q40) for cells containing \"Austria\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Norway",
+    "judgment": "matched",
+    "match": {
+      "id": "Q20",
+      "name": "Norway",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Norway (Q20) for cells containing \"Norway\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Spain",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29",
+      "name": "Spain",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q1250464",
+        "Q51576574",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Spain (Q29) for cells containing \"Spain\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Portugal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q45",
+      "name": "Portugal",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q20181813",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Portugal (Q45) for cells containing \"Portugal\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Lithuania",
+    "judgment": "matched",
+    "match": {
+      "id": "Q37",
+      "name": "Lithuania",
+      "types": [
+        "Q3624078",
+        "Q179164",
+        "Q63791824",
+        "Q6256",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Lithuania (Q37) for cells containing \"Lithuania\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Romania",
+    "judgment": "matched",
+    "match": {
+      "id": "Q218",
+      "name": "Romania",
+      "types": [
+        "Q3624078",
+        "Q6256"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Romania (Q218) for cells containing \"Romania\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Hungary",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28",
+      "name": "Hungary",
+      "types": [
+        "Q3624078",
+        "Q123480",
+        "Q6256",
+        "Q113489728"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Hungary (Q28) for cells containing \"Hungary\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Russia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q159",
+      "name": "Russia",
+      "types": [
+        "Q3624078",
+        "Q859563",
+        "Q6256",
+        "Q1323642",
+        "Q43702"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Russia (Q159) for cells containing \"Russia\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Ukraine",
+    "judgment": "matched",
+    "match": {
+      "id": "Q212",
+      "name": "Ukraine",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q179164",
+        "Q7270",
+        "Q619610",
+        "Q4209223",
+        "Q4835091"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Ukraine (Q212) for cells containing \"Ukraine\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Serbia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q403",
+      "name": "Serbia",
+      "types": [
+        "Q3624078",
+        "Q7270",
+        "Q123480",
+        "Q6256"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Serbia (Q403) for cells containing \"Serbia\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Moldova",
+    "judgment": "matched",
+    "match": {
+      "id": "Q217",
+      "name": "Moldova",
+      "types": [
+        "Q3624078",
+        "Q179164",
+        "Q123480",
+        "Q6256"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Moldova (Q217) for cells containing \"Moldova\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Albania",
+    "judgment": "matched",
+    "match": {
+      "id": "Q222",
+      "name": "Albania",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q179164",
+        "Q7270",
+        "Q51576574"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Albania (Q222) for cells containing \"Albania\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Armenia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q399",
+      "name": "Armenia",
+      "types": [
+        "Q3624078",
+        "Q6256",
+        "Q123480"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Armenia (Q399) for cells containing \"Armenia\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "North MacedoniaN.Macedonia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q221",
+      "name": "North Macedonia",
+      "types": [
+        "Q3624078",
+        "Q123480",
+        "Q6256"
+      ],
+      "score": 77
+    },
+    "shareNewTopics": false,
+    "description": "Match item North Macedonia (Q221) for cells containing \"North MacedoniaN.Macedonia\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "to_country_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "to_country_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "to_country_wikidata",
+    "similarValue": "Yugoslavia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q36704",
+      "name": "Yugoslavia",
+      "types": [
+        "Q3024240",
+        "Q3624078",
+        "Q51576574"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Yugoslavia (Q36704) for cells containing \"Yugoslavia\" in column to_country_wikidata"
+  },
+  {
+    "op": "core/extend-reconciled-data",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "to_country_wikidata",
+    "endpoint": "https://wikidata.reconci.link/en/api",
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "extension": {
+      "properties": [
+        {
+          "id": "P625",
+          "name": null,
+          "settings": {
+            "limit": "0",
+            "rank": "best",
+            "references": "any"
+          }
+        }
+      ]
+    },
+    "columnInsertIndex": 3,
+    "description": "Extend data at index 3 based on column to_country_wikidata"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "year",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "year_formatUS",
+    "columnInsertIndex": 1,
+    "description": "Create column year_formatUS at index 1 based on column year using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "year_formatUS",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column year_formatUS using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "year_formatUS",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column year_formatUS using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "year_formatUS",
+    "expression": "value.replace(\"T00:00:00Z\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column year_formatUS using expression value.replace(\"T00:00:00Z\",\"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "performer",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "performer_wikidata",
+    "columnInsertIndex": 6,
+    "description": "Create column performer_wikidata at index 6 based on column performer using expression grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "year",
+    "expression": "grel:value.replace(value,\"Eurovision Song Contest\" + \" \" + value)",
+    "onError": "set-to-blank",
+    "newColumnName": "edition",
+    "columnInsertIndex": 1,
+    "description": "Create column edition at index 1 based on column year using expression grel:value.replace(value,\"Eurovision Song Contest\" + \" \" + value)"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_wikidata",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q5",
+        "name": "human"
+      },
+      "autoMatch": true,
+      "columnDetails": [
+        {
+          "column": "edition",
+          "propertyName": "participant in",
+          "propertyID": "P1344"
+        }
+      ],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column performer_wikidata to type Q5"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "performer_wikidata",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q215380",
+        "name": "musical group"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column performer_wikidata to type Q215380"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : avis",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "performer_wikidata",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q9212979",
+        "name": "musical duo"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column performer_wikidata to type Q9212979"
+  },
+  {
+    "op": "core/extend-reconciled-data",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : avis",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "performer_wikidata",
+    "endpoint": "https://wikidata.reconci.link/en/api",
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "extension": {
+      "properties": [
+        {
+          "id": "P21",
+          "name": null
+        }
+      ]
+    },
+    "columnInsertIndex": 8,
+    "description": "Extend data at index 8 based on column performer_wikidata"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : avis",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "sex or gender",
+    "clearData": true,
+    "description": "Discard recon judgments and clear recon data for cells in column sex or gender"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : avis",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "sex or gender",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "non applicable"
+      }
+    ],
+    "description": "Mass edit cells in column sex or gender"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "sex or gender",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "performer_type",
+    "columnInsertIndex": 9,
+    "description": "Create column performer_type at index 9 based on column sex or gender using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "female"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "solo"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "non applicable"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "groupe"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "trans woman"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "solo"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "non-binary"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "solo"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "male"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "solo"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "genderfluid"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "solo"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : type d'action de jugement",
+          "expression": "cell.recon.judgmentAction",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "unknown",
+                "l": "unknown"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "performer_wikidata",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "test",
+    "columnInsertIndex": 8,
+    "description": "Create column test at index 8 based on column performer_wikidata using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : type d'action de jugement",
+          "expression": "cell.recon.judgmentAction",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "unknown",
+                "l": "unknown"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "test",
+          "columnName": "test",
+          "query": "and",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "group"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : type d'action de jugement",
+          "expression": "cell.recon.judgmentAction",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "unknown",
+                "l": "unknown"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "test",
+          "columnName": "test",
+          "query": "and",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "sex or gender",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "non applicable"
+      }
+    ],
+    "description": "Mass edit cells in column sex or gender"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : type d'action de jugement",
+          "expression": "cell.recon.judgmentAction",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "unknown",
+                "l": "unknown"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "test",
+          "columnName": "test",
+          "query": "&",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "groupe"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "performer_wikidata : type d'action de jugement",
+          "expression": "cell.recon.judgmentAction",
+          "columnName": "performer_wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "unknown",
+                "l": "unknown"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "test",
+          "columnName": "test",
+          "query": "&",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "sex or gender",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "non applicable"
+      }
+    ],
+    "description": "Mass edit cells in column sex or gender"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "performer_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "group"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "groupe"
+      }
+    ],
+    "description": "Mass edit cells in column performer_type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "performer_wikidata",
+    "description": "Remove column performer_wikidata"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "test",
+    "description": "Remove column test"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "running_final",
+    "description": "Remove column running_final"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "place_final",
+    "description": "Remove column place_final"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "points_final",
+    "description": "Remove column points_final"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "points_tele_final",
+    "description": "Remove column points_tele_final"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "points_jury_final",
+    "description": "Remove column points_jury_final"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "place_contest",
+          "columnName": "place_contest",
+          "query": ".",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "place_contest",
+    "expression": "value.replace(\".0\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column place_contest using expression value.replace(\".0\",\"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "year",
+          "expression": "value",
+          "columnName": "year",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2020",
+                "l": "2020"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "place_contest",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "non applicable"
+      }
+    ],
+    "description": "Mass edit cells in column place_contest"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lyrics",
+    "expression": "grel:cell.cross('ajout_langue','lyrics').cells['cy'].value[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "langue",
+    "columnInsertIndex": 12,
+    "description": "Create column langue at index 12 based on column lyrics using expression grel:cell.cross('ajout_langue','lyrics').cells['cy'].value[0]"
+  }
+]
