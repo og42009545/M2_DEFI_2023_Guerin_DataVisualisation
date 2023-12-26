@@ -62,7 +62,18 @@ Je réalise un contrôle qualité allégé (10 points) de ce jeu de données.
 # Nettoyage et enrichissement des données
 ## Nettoyage via OpenRefine 
 
-Je vais procéder au data-wrangling de mon fichier contestants.csv via OpenRefine.
+Je procède au data-wrangling de mon fichier contestants.csv via OpenRefine. 
+Pour ce faire, j'ai rédigé un document relatant toutes mes taches.
+
+Pour l'enrichissement j'ai utilisé d'une part WikiData (directement via OpenRefine) pour récupérer le genre de l'artiste et le type d'artiste (groupe ou solo) et un Script Python pour détecter les langues de chaque chanson.
+
+### Liens :
+* [Explication des étapes de nettoyage et d'enrichissement via WIKIDATA/script Python](/autres/M2_DEFI_2023_Guerin_OpenRefineWikiData.pdf).
+* [Script Python pour la détection de langues, conçu par moi-même](/sources/langue.py).
+* [CSV d'export d'OpenRefine](/sources/M2_DEFI_2023_Guerin_Eurovision_ExportOpenRefine.csv).
+* [Historique d'OpenRefine](/sources/M2_DEFI_2023_Guerin_Eurovision_Historique.json).
+* [CSV final](/sources/M2_DEFI_2023_Guerin_Eurovision_PostOpenRefine.csv).
+
 
 ## Enrichissement via WikiData
 
