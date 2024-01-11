@@ -80,18 +80,19 @@ Pour l'enrichissement j'ai utilisé d'une part WikiData (directement via OpenRef
 ## L'Eurovision en bref
 ### Les victoires par pays
 
-J'ai réalisé une copie de mon CSV final afin de filter mes données pour réaliser ma première visualisation. En effet, je veux d'abord visualiser une carte des pays ayant remporté le concours, avec le nombre de victoires. Pour ce faire, je ne garde que les lignes où le place_contest = 1, puis j'ajoute une colonne dans LibreOffice qui s'appelle "nbVictoires" ou je fais une fonction NBSI pour compter le nombre de fois où un pays apparait afin de déterminer le nombre de victoires. Je supprime d'autres colonnes (ex: coordonnées de géolocalisation car finalement DataWrapper va les trouver automatiquement).
-
-Sur Datawrapper je réalise une "Symbol Map".
+J'ai réalisé une copie de mon CSV final afin de filter mes données pour réaliser ma première visualisation. En effet, je veux d'abord visualiser une carte des pays ayant remporté le concours, avec le nombre de victoires. Pour ce faire, je ne garde que les lignes où le place_contest = 1, puis j'ajoute une colonne dans LibreOffice qui s'appelle "nbVictoires" ou je fais une fonction NBSI pour compter le nombre de fois où un pays apparait afin de déterminer le nombre de victoires. Je supprime d'autres colonnes (ex: coordonnées de géolocalisation car finalement DataWrapper va les trouver automatiquement). Sur Datawrapper je réalise une "Symbol Map".
 
 <iframe title="Les pays qui ont gagné l'Eurovision" aria-label="Map" id="datawrapper-chart-azGjB" src="https://datawrapper.dwcdn.net/azGjB/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="810" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
 
-#### Fichier utilisé pour cette première visualisation
-* [CSV final](/sources/M2_DEFI_2023_Guerin_Eurovision_PostOpenRefine.csv).
+On s'aperçoit donc que la France est une nation pas si mauvaise que l'on prétend être au concours puisque nous avons gagné 5 fois. Cependant, notre dernière victoire remonte à...1977.
 
+#### Fichier utilisé pour cette première visualisation
+* [CSV final](/sources/M2_DEFI_2023_Guerin_Eurovision_PremiereVisualisation.csv).
 
 ### La France à l'Eurovision
+
+Je décide donc de comparer la France aux autres grandes nations qui ont gagné minimum 5 fois l'Eurovision.
 
 
 ## Comment ganger à l'Eurovision ?
