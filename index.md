@@ -123,5 +123,18 @@ On va donc essayer d'estimer nos chances pour cette année avec les paramètres 
 
 Pour rappel, Slimane est un homme qui chante seul et en français.
 
+J'utilise DatWrapper pour réaliser ces visualisations assez simples (donuts).
+
+#### Genre :
+
+<iframe title="Le genre des candidats à l'Eurovision" aria-label="Multiple Donuts" id="datawrapper-chart-Po7Pd" src="https://datawrapper.dwcdn.net/Po7Pd/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="356" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
+
+On remarque que les hommes n'arrivent qu'en troisième position des gagnants.
+
+#### Langue :
+
+
+
 # Conclusion
 # Sources
