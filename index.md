@@ -108,7 +108,20 @@ Mon seul soucis concernait les années où les pays n'ont pas participé à l'Eu
 
 On voit donc la dégringolade de la France depuis quelques années au concours (hormis la 2ème place de Barbara Pravi en 2021, et la 6ème place d'Amir en 2015) alors que d'autres pays comme la Suède a gagné de nombreuses fois ces dernières années (2012, 2015 et 2023). Je décide donc de faire un panorama des dix derniers gagnants pour voir s'il y a une tendance qui émane de la dernière décénnie.
 
+<div class="flourish-embed flourish-cards" data-src="visualisation/16447895"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+On remarque que la Suède a gagné trois fois dont deux fois avec la même chanteuse, Loreen : c'était d'ailleurs la première fois qu'une femme remportait deux fois le même concours. On s'aperçoit que hormis la Suède et les Pays Bas, les grandes nations de l'Eurovision ne sont pas représentés. On voit l'émergence d'autres nations, comme l'Italie et Israel qui ont 3 victoires à leur actif (cf. première visualisation).
+
+On remarque aussi que ce sont en majorité des performances solo qui ont remporté cette dernière décennie le concours et que l'anglais est la langue majoritaire.
+
+#### Fichier utilisé pour cette troisième visualisation
+* [CSV de la troisième visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_TroisiemeVisualisation.csv).
+
 ### Exploration de différentes pistes (le genre, la langue, artiste solo/groupe etc.) 
+
+On va donc essayer d'estimer nos chances pour cette année avec les paramètres suivants : le genre de l'artiste, la langue de la chanson et si la performance est réalisée en groupe ou en solo.
+
+Pour rappel, Slimane est un homme qui chante seul et en français.
 
 # Conclusion
 # Sources
