@@ -100,10 +100,15 @@ Mon seul soucis concernait les années où les pays n'ont pas participé à l'Eu
 
 <div class="flourish-embed flourish-chart" data-src="visualisation/16447744"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-
-## Comment ganger à l'Eurovision ?
+#### Fichier utilisé pour cette deuxième visualisation
+* [CSV de la deuxième visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_DeuxiemeVisualisation.csv).
+  
+## Comment gagner à l'Eurovision ?
 ### Zoom sur les dix derniers gagnants (2012-2023)
-### Exploration de différentes pistes (le genre, la langue, artiste solo/groupe etc.)
+
+On voit donc la dégringolade de la France depuis quelques années au concours (hormis la 2ème place de Barbara Pravi en 2021, et la 6ème place d'Amir en 2015) alors que d'autres pays comme la Suède a gagné de nombreuses fois ces dernières années (2012, 2015 et 2023). Je décide donc de faire un panorama des dix derniers gagnants pour voir s'il y a une tendance qui émane de la dernière décénnie.
+
+### Exploration de différentes pistes (le genre, la langue, artiste solo/groupe etc.) 
 
 # Conclusion
 # Sources
