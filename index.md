@@ -127,14 +127,48 @@ J'utilise DatWrapper pour réaliser ces visualisations assez simples (donuts).
 
 #### Genre :
 
+Pour le genre j'utilise la fonction NB.SI pour avoir le nombre d'hommes, femmes etc. 
+
 <iframe title="Le genre des candidats à l'Eurovision" aria-label="Multiple Donuts" id="datawrapper-chart-Po7Pd" src="https://datawrapper.dwcdn.net/Po7Pd/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="356" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
 
-On remarque que les hommes n'arrivent qu'en troisième position des gagnants.
+On remarque que les hommes n'arrivent qu'en troisième position des gagnants et ce que sont les femmes qui gagnent le plus souvent le concours. Slimane partirait-il donc avec un désavantage ?
+
+#### Artiste Solo :
+
+Pour le type de performance, même chose : j'ai construit mon fichier grâce à des NB.SI sur LibreOffice en partant du fichier Post-OpenRefine.
+
+<iframe title="Part des performances solo &amp;amp; de groupe à l'Eurovision" aria-label="Multiple Pies" id="datawrapper-chart-OfMTk" src="https://datawrapper.dwcdn.net/OfMTk/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="339" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
+
+Ce sont les artistes solo qui ont le plus gagné le concours, et ce sont ce type d'artistes qui sont le plus envoyés par la France. Slimane a donc bien fait de redevenur artiste solo après son aventure musicale avec Vitaa.
 
 #### Langue :
 
+Au niveau de la langue, j'ai décidé d'utiliser les fonctions SI, puis NB.SI sur LibreOffice : en effet, mon script Python n'est pas très forcément sur certaines langues, par exemple les langues slaves. Par exemple, je me suis aperçue que pour la chanson Stefania il n'avait pas détecté l'ukrainien. Je pense que partir sur l'anglais vs le reste aura moins d'erreurs.
 
+<iframe title="L'anglais à l'Eurovision" aria-label="Colonnes groupées" id="datawrapper-chart-Kcaiu" src="https://datawrapper.dwcdn.net/Kcaiu/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
+
+Je remarque qu'à l'echelle du concours, ce sont les chansons qui ne sont pas en anglais qui ont le plus gagné mais seulement car je les ais assemblés. D'ailleurs, si on regarde ne serait que ma deuxième visualisation, on s'aperçoit qu'au cours de la dernière décennie, les chansons ayant remporté le concours sont le plus souvent chantées en anglais.
+
+De plus, pour la France, je relève des erreurs : pour la chanson Roi de Bilal Hassani, on me l'a classe en anglais alors que ce n'est que le refrain qui n'est en anglais. 
+
+Une chose est sûre : l'anglais reste la langue de référence si on souhaite mettre toutes les chances de son côté. La France aime donc les challenges puisqu'elle envoie majoritairement des chansons qui ne sont pas en anglais (français surtout, mais aussi corse et breton).
+
+#### Fichier utilisé pour ces visualisations
+* [CSV du genre](/sources/M2_DEFI_2023_Guerin_Eurovision_genre.csv).
+* [CSV sur le type de performance](/sources/M2_DEFI_2023_Guerin_Eurovision_performertype.csv).
+* [CSV de la langue](/sources/M2_DEFI_2023_Guerin_Eurovision_langue.csv).
 
 # Conclusion
+
+A l'évidence, bien que la France soit toujours dans le top des nations avec le plus de victoires (cf. première visualisation), il est évident que nous sommes depuis plusieurs années à la traîne dans le classement en comparaison avec les autres nations victorieuses (cf. deuxième visualisation). En regardant les dix derniers gagnants (cf. troisième visualisation), il est évident qu'une ère nouvelle souffle sur le concours avec la montée de nouvelles nations (Pays-Bas, Ukraine et Italie par exemple). 
+
+La France, représentée en 2024 avec Slimane, n'a sur le papier très peu de chances de s'en sorti : bien que la performance soit celle d'un artiste seul sur scène, la chanson est en français et est chantée par un homme. Or, si on regarde les statistiques générales sur le concours (cf. petites visualisations) il aurait fallu envoyer une femme chantant en anglais...
+
+Malgré tout, d'autres paramètres rentrent en compte : les chansons et voix concurrentes (il y a des années de grand cru quand d'autres sont plus faciles d'accès), la position de la chanson (la malédiction de la position 2...), la mise en scène. 
+
+Slimane a d'autres atouts : une voix magnifique, des paroles touchantes. Nul doute qu'il nous rapportera une très belle place, et pourquoi pas la victoire ? 
+
 # Sources
