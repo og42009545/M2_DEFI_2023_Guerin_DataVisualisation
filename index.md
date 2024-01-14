@@ -88,11 +88,17 @@ J'ai réalisé une copie de mon CSV final afin de filter mes données pour réal
 On s'aperçoit donc que la France est une nation pas si mauvaise que l'on prétend être au concours puisque nous avons gagné 5 fois. Cependant, notre dernière victoire remonte à...1977.
 
 #### Fichier utilisé pour cette première visualisation
-* [CSV final](/sources/M2_DEFI_2023_Guerin_Eurovision_PremiereVisualisation.csv).
+* [CSV de la première visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_PremiereVisualisation.csv).
 
 ### La France à l'Eurovision
 
-Je décide donc de comparer la France aux autres grandes nations qui ont gagné minimum 5 fois l'Eurovision.
+Je décide donc de comparer la France aux autres grandes nations qui ont gagné minimum 5 fois l'Eurovision, à savoir Le Luxembourg, La Suède, les Pays Bas, Le Royaume Uni et l'Irlande.
+
+Je réalise une timeline sur Flourish. Pour ce faire j'ai dû réarranger mes données pour avoir en colonne les années et en ligne les places obtenues selon les pays. Je réalise cette transformation sur libreoffice via des copier/coller en "Transposer".
+
+Mon seul soucis concernait les années où les pays n'ont pas participé à l'Eurovision : j'ai remplacé mes "non applicable" en case vide.
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/16447744"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
 
 ## Comment ganger à l'Eurovision ?
