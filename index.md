@@ -180,3 +180,23 @@ Malgré tout, d'autres paramètres rentrent en compte : les chansons et voix con
 Slimane a d'autres atouts : une voix magnifique, des paroles touchantes et un charisme indéniable. Nul doute qu'il nous rapportera une très belle place, et pourquoi pas la victoire (cela ne coûte rien de rêver).
 
 # Sources
+
+@inproceedings{burgoyne_mirovision,
+    author       = {John Ashley Burgoyne and Janne Spijkervet and David John Baker},
+    title        = {Measuring the {Eurovision Song Contest}: A Living Dataset for Real-World {MIR}},
+    booktitle    = {Proceedings of the 24th International Society for Music Information Retrieval Conference},
+    year         = 2023,
+    address      = {Milan, Italy},
+    url          = {https://archives.ismir.net/ismir2023/paper/000097.pdf}
+}
+
+@misc{spijkervet_eurovision,
+    author       = {Janne Spijkervet},
+    title        = {{The Eurovision Dataset}},
+    month        = mar,
+    year         = 2020,
+    doi          = {10.5281/zenodo.4036457},
+    version      = {1.0},
+    publisher    = {Zenodo},
+    url          = {https://zenodo.org/badge/latestdoi/214236225}
+}
