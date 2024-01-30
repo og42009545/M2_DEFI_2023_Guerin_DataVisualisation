@@ -8,7 +8,7 @@
 - [Conclusion](#conclusion)
 
 # Présentation du sujet
-J'ai décidé de travailler sur le **concours de l'Eurovision** (version adulte). En effet, je suis une grande fan de l'Eurovision, depuis petite, que je regarde chaque année. Malheureusement, la France n'a pas gagné depuis **1977** avec la chanson de **Marie Myriam** *L'Oiseau et L'Enfant* ce qui me chagrine énormément. De ce fait, j'aimerais estimer les chances de la France cette année, puisque notre représentant et notre chanson ont déjà été dévoilés. En effet, pour l'édition de 2024, c'est le chanteur **Slimane** qui va représenter la France, avec la chanson *Mon Amour*.
+J'ai décidé de travailler sur le **concours de l'Eurovision** (version adulte). En effet, je suis une grande fan de l'Eurovision, depuis petite, et je regarde chaque année le concours. Malheureusement, la France n'a pas gagné depuis **1977** avec la chanson de **Marie Myriam** *L'Oiseau et L'Enfant*, ce qui me chagrine énormément. De ce fait, j'aimerais estimer les chances de la France cette année, puisque notre représentant et notre chanson ont déjà été dévoilés. En effet, pour l'édition de 2024, c'est le chanteur **Slimane** qui va représenter la France, avec la chanson *Mon Amour*.
 
 ![Photo de Slimane, représentant de la France pour le concours de l'Eurovision en 2024](/images/Eurovision_2024_France_Slimane_MonAmour.jpg)
 
@@ -24,10 +24,10 @@ Pour ce sujet, j'ai décidé de m'appuyer sur le jeu de données de l'utilisatri
 
 J'ai décidé de me concentrer sur **la release de 2023**, la plus à jour. Je n'ai gardé que le fichier **contestants.csv**.
 
-**Pourquoi?**
-Ce qui m'intéresse c'est d'évaluer les chances de Slimane au concours et donc pour cela, il me faut comparer notre représentant et notre chanson avec les autres participants (*contestants*). Mon but va être de voir ce qui fonctionne mieux à l'Eurovision en analysant notamment les vainqueurs pour voir si notre représentant et notre chanson rentrent dans les critères.
+**Pourquoi ?**
+Ce qui m'intéresse c'est d'évaluer les chances de Slimane au concours et donc pour cela, il me faut comparer notre représentant et notre chanson avec les autres participants (*contestants*). Mon but va être de voir ce qui fonctionne mieux à l'Eurovision (un chanteur homme ? un groupe ? une chanson en anglais ?).
 
-J'ajouterai des informations via WIKIDATA (par exemple, géolocalisation des pays).
+J'ajouterai des informations directement sur OpenRefine via un enrichissement WikiData (par exemple, géolocalisation des pays).
 
 ### Liens :
 * [Source du repository](https://github.com/Spijkervet/eurovision-dataset/)
@@ -41,14 +41,14 @@ Je réalise un contrôle qualité allégé (10 points) de ce jeu de données.
 
 |   Point de contrôle qualité   |   Problème observé et commentaire |   Correction : comment ? importance ? |
 |---    |---    |---   |
-| Le jeu de données est difficilement accessible (format “image”, PDF, HTML...), le fichier est mal formé   |   Le jeu de données est facilement accessible, puis qu’il est au format csv, format non-propriétaire.   | Rien à signaler. | 
-| La licence est absente ou inhabituelle, le jeu de données n’est pas “open data”   |  Le jeu de données est open data : on n’a pas besoin de s’inscrire à Github pour accéder au fichier contestants.csv. Cependant, il n’y a pas de licence puisque c’est une initiative de fans de l’Eurovision. En revanche, dans le readme du repository, il est notifié la source des données scrapées (« The metadata and voting data are provided by the EurovisionWorld fansite. ») et il est également possible de télécharger les fichiers python pour reproduire l’ensemble des jeux de données (« You can download the entire dataset using the scraping code included in this repository. »). Par contre, il est demandé de citer les auteurs du jeu de données.|   Ce n’est pas une plateforme d’open data, mais on voit qu’il y a une volonté de sérieux de la part des personnes à l’initiative du projet. |
+| Le jeu de données est difficilement accessible (format “image”, PDF, HTML...), le fichier est mal formé   |   Le jeu de données est facilement accessible, puisqu’il est au format csv, format non-propriétaire.   | Rien à signaler. | 
+| La licence est absente ou inhabituelle, le jeu de données n’est pas “open data”   |  Le jeu de données est open data : on n’a pas besoin de s’inscrire à Github pour accéder au fichier contestants.csv. De plus, il n’y a pas de licence puisque c’est une initiative de fans de l’Eurovision. En revanche, dans le readme du repository, il est notifié la source des données scrapées (« The metadata and voting data are provided by the EurovisionWorld fansite. ») et il est également possible de télécharger les fichiers python pour reproduire l’ensemble des jeux de données (« You can download the entire dataset using the scraping code included in this repository. »). Par contre, il est demandé de citer les auteurs du jeu de données.|   Ce n’est pas une plateforme d’open data, mais on voit qu’il y a une volonté de sérieux de la part des personnes à l’initiative du projet. |
 | Le fichier fait peu appel aux standards répandu et aux données pivots   |  Ici on a du csv, ce qui correspond à ce qui est répandu et recommandé (format non-propriétaire).    |   Rien à signaler.|
 | Le fichier est mal documenté  |    Le fichier est documenté : en effet, il est possible d'avoir une explication sur les champs du fichier dans le read me du repository. | Dans le cadre du projet, on remarque qu'il y a des colonnes qui seront à supprimer (par exemples, celles concernant les demi-finales puisque les pays comme les Big Five et le pays organisateur ne participent pas aux demi-finales). | 
-| Il existe des problèmes de syntaxe  |  Il existe quelques problèmes de cohérence : tout d’abord, dans la colonne « to_country_id », on remarque qu’il y a parfois l’id (qui lui n’est pas documenté) du pays pour lequel le représentant concoure, ou le nom écrit directement. Au niveau des colonnes concernant les points obtenus et la place finale (que cela soit en demi-finale ou en finale), il y a aussi un souci de cohérence : parfois on a des nombres décimaux (15.0 pour 15ème place) et parfois on a des nombres entiers (15).  |   On supprimera cette colonne et on se basera sur la colonne « to_country ». On prendra des valeurs décimales pour les points, mais des valeurs entières pour la place obtenue. |
+| Il existe des problèmes de syntaxe  |  Il existe quelques problèmes de cohérence : tout d’abord, dans la colonne « to_country_id », on remarque qu’il y a parfois l’id (qui lui n’est pas documenté) du pays pour lequel le représentant concoure, ou le nom écrit directement. Au niveau des colonnes concernant les points obtenus et la place finale (que cela soit en demi-finale ou en finale), il y a aussi un souci de cohérence : parfois on a des nombres décimaux (15.0 pour 15ème place) et parfois on a des nombres entiers (15).  |   On supprimera la colonne « to_country_id » et on se basera sur la colonne « to_country ». On prendra des valeurs décimales pour les points, mais des valeurs entières pour la place obtenue. |
 | Valeurs aberrantes, suspectes, inexplicables, pas crédibles   |  A part le fait qu’on aurait dû gagner avec Barbara Pravi, non rien d’aberrant. La seule colonne qui m’a fait tiquée est « sf_num » car je voyais pleins de 1.0 / 2.0 mais c’est en fait le numéro de la demi-finale à laquelle le participant a pris part et c’est expliqué dans la documentation. De plus, il y a eu parfois au début plusieurs gagnants et des ex-aequo donc il est normal d’avoir parfois plusieurs gagnants pour les premières éditions du concours. |  Rien à signaler. |
-| Il manque des données et cela n’est pas documenté (trous, données tronquées, valeurs vides, granularité / fréquence / maillage / fraîcheur)  |  Oui, il y a beaucoup de trous et ce n’est pas expliqué. Cependant, si on connait un peu le principe de l’Eurovisions ces trous sont explicables.Pour la colonne « sf_num », il y a des trous car pendant très longtemps il n’y a pas eu de demi-finales car il y avait très peu de pays qui participaient (surtout dans les premières années du concours).Pour « running_sf » et « running_final », il y a des trous car tous les pays ne prennent pas part aux demi-finales (c’est le cas des cinq pays fondateurs de l’Eurovision, les Big Five, dont fait partie la France mais aussi du pays organisateur) ni aux finales (si le pays perd en demi-finale, il ne peut pas participer en finale).Pour les colonnes liées aux points attribués par le jury et le télévote, les trous s’expliquent de différentes manières : le site qui sert pour la captation des données n’a pas toutes les données, notamment des premières années. Des plus, le télévote n’existait pas au départ. On voit aussi des écarts dans le nombre de points qu’obtiennent par exemple les gagnants : c’est parce qu’il y a entre autres maintenant beaucoup plus de pays participants qu’au début. Les données sont fraîches car contiennent la dernière édition de mai 2023. | Ne pas se baser sur les colonnes relatives aux nombres de points et aux demi-finales. | 
-| Trop de données : doublons, inutilement vieilles, précision / fréquence / maillage / fraîcheur  | Le fichier contient 1735 lignes. Il n’y a pas de doublons : par exemple, il y a des chanteurs (Mahmood, Sergey Lazarev etc.) qui ont participé à plusieurs éditions. Par contre il y a des données inutiles, type lyrics (paroles) : à part si on étudie les chansons gagnantes et qu’elles seraient dans la même langue (ce qui n’est pas le cas, donc il faudrait les traduire), les paroles sont difficilement exploitables. Idem pour la colonne sur l'url youtube. |   Supprimer la colonne lyrics et youtube. |
+| Il manque des données et cela n’est pas documenté (trous, données tronquées, valeurs vides, granularité / fréquence / maillage / fraîcheur)  |  Oui, il y a beaucoup de trous et ce n’est pas expliqué. Cependant, si on connait un peu le principe de l’Eurovisions ces trous sont explicables. Par exemple, pour la colonne « sf_num », il y a des trous car pendant très longtemps il n’y a pas eu de demi-finales car il y avait très peu de pays qui participaient (surtout dans les premières années du concours). Concernant les colonnes « running_sf » et « running_final », il y a des trous car tous les pays ne prennent pas part aux demi-finales (c’est le cas des cinq pays fondateurs de l’Eurovision, les Big Five, dont fait partie la France mais aussi le pays organisateur qui échappe à la demi-finale) ni aux finales (si le pays perd en demi-finale, il ne peut pas participer en finale). Pour les colonnes liées aux points attribués par le jury et le télévote, les trous s’expliquent de différentes manières : le site qui sert pour la captation des données n’a pas toutes les données, notamment des premières années. Des plus, le télévote n’existait pas au départ. On voit aussi des écarts dans le nombre de points qu’obtiennent par exemple les gagnants : c’est parce qu’il y a entre autres maintenant beaucoup plus de pays participants qu’au début (il y a donc plus de points à distribuer). Les données sont fraîches car contiennent la dernière édition de mai 2023. | Ne pas se baser sur les colonnes relatives aux nombres de points et aux demi-finales. | 
+| Trop de données : doublons, inutilement vieilles, précision / fréquence / maillage / fraîcheur  | Le fichier contient 1735 lignes. Il n’y a pas de doublons : par exemple, il y a des chanteurs (Mahmood, Sergey Lazarev etc.) qui ont participé à plusieurs éditions. |   N/A |
 | Données posant problème avec la réglementation (données perso, relatives à la santé, la religion..., propriété littéraire et artistique, etc.)   |    Les informations dans ce jeu de données sont publiques : le nom des chanteurs, de la chanson, les paroles, les données liées à l’ordre de passage, les points etc… sont fournis par le concours de l’Eurovision lui-même.  |  Rien à signaler. |
 | Les contenus posent problèmes : synonymies, non traduits (USA), cryptique (DAECPP), utilisation du 0 au lieu du “null”...  |    Le seul souci repose sur les id des pays qui n’est pas défini, mais on peut se passer de cette colonne grâce à la colonne « to_country ».  | Utiliser la colonne « to_country ».  |
 
@@ -66,7 +66,7 @@ Je procède au data-wrangling de mon fichier contestants.csv via OpenRefine.
 Pour ce faire, j'ai rédigé un document relatant toutes mes taches (enrichissement inclus).
 
 ## Enrichissement via WikiData
-Pour l'enrichissement j'ai utilisé d'une part WikiData (directement via OpenRefine) pour récupérer le genre de l'artiste et le type d'artiste (groupe ou solo) et un Script Python pour détecter les langues de chaque chanson.
+Pour l'enrichissement j'ai utilisé d'une part WikiData (directement via OpenRefine) pour récupérer le genre de l'artiste et le type d'artiste (groupe ou solo) et un Script Python pour détecter les langues de chaque chanson. Le processus est expliqué dans le document relatant toutes mes taches.
 
 ### Liens :
 * [Explication des étapes de nettoyage et d'enrichissement via WIKIDATA/script Python](/autres/M2_DEFI_2023_Guerin_OpenRefineWikiData.pdf).
@@ -80,41 +80,49 @@ Pour l'enrichissement j'ai utilisé d'une part WikiData (directement via OpenRef
 ## L'Eurovision en bref
 ### Les victoires par pays
 
-J'ai réalisé une copie de mon CSV final afin de filter mes données pour réaliser ma première visualisation. En effet, je veux d'abord visualiser une carte des pays ayant remporté le concours, avec le nombre de victoires. Pour ce faire, je ne garde que les lignes où le place_contest = 1, puis j'ajoute une colonne dans LibreOffice qui s'appelle "nbVictoires" ou je fais une fonction NBSI pour compter le nombre de fois où un pays apparait afin de déterminer le nombre de victoires. Je supprime d'autres colonnes (ex: coordonnées de géolocalisation car finalement DataWrapper va les trouver automatiquement). Sur Datawrapper je réalise une "Symbol Map".
+J'ai réalisé une copie de mon CSV final afin de filter mes données pour réaliser ma première visualisation. 
+
+En effet, je veux d'abord visualiser une carte des pays ayant remporté le concours, avec le nombre de victoires. Pour ce faire, je ne garde sur mon fichier que les lignes où le place_contest = 1, puis j'ajoute une colonne dans LibreOffice qui s'appelle "nbVictoires" ou je fais une fonction NBSI pour compter le nombre de fois où un pays apparait afin de déterminer le nombre de victoires. Je supprime d'autres colonnes (ex: coordonnées de géolocalisation car finalement DataWrapper va les trouver automatiquement). 
+
+Sur Datawrapper je réalise une "Symbol Map".
 
 <iframe title="Les pays qui ont gagné l'Eurovision" aria-label="Map" id="datawrapper-chart-azGjB" src="https://datawrapper.dwcdn.net/azGjB/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="810" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
 
-On s'aperçoit donc que la France est une nation pas si mauvaise que l'on prétend être au concours puisque nous avons gagné 5 fois. Cependant, notre dernière victoire remonte à...1977.
+On s'aperçoit donc que la France n'est pas si mauvaise qu'elle ne prétend l'être puisque nous avons gagné 5 fois. Cependant, notre dernière victoire remonte à...1977. 
 
-#### Fichier utilisé pour cette première visualisation
+Concernant les données, la visualisation me permet de remarquer aussi une coquille : le code iso pour l'Ukraine devrait être ukr et non sk, ce qui peut me faire douter de l'efficacité de mon script python pour les langues slaves. De plus, comme expliqué sur la carte, la victoire de la Yougoslavie (1989) a été retirée car ce pays n'existe plus et ne peut plus être placée sur une carte contemporaine.
+
+#### **Fichier utilisé pour cette première visualisation**
 * [CSV de la première visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_PremiereVisualisation.csv).
 
 ### La France à l'Eurovision
 
-Je décide donc de comparer la France aux autres grandes nations qui ont gagné minimum 5 fois l'Eurovision, à savoir Le Luxembourg, La Suède, les Pays Bas, Le Royaume Uni et l'Irlande.
+Je décide donc de comparer la France aux autres grandes nations qui ont gagné minimum 5 fois l'Eurovision, à savoir : Le Luxembourg, La Suède, les Pays Bas, Le Royaume Uni et l'Irlande.
 
-Je réalise une timeline sur Flourish. Pour ce faire j'ai dû réarranger mes données pour avoir en colonne les années et en ligne les places obtenues selon les pays. Je réalise cette transformation sur libreoffice via des copier/coller en "Transposer".
+Je décide de réaliser une timeline sur Flourish afin de voir où terminent ces pays chaque année au concours. Pour ce faire j'ai dû réarranger mes données pour avoir en colonne les années et en ligne les places obtenues selon les pays. Je réalise cette transformation sur libreoffice via des copier/coller > "Transposer".
 
-Mon seul soucis concernait les années où les pays n'ont pas participé à l'Eurovision : j'ai remplacé mes "non applicable" en case vide.
+Mon seul soucis concernait les années où les pays n'ont pas participé à l'Eurovision : j'ai remplacé mes "non applicable" dans le fichier d'origine en case vide. Dans Flourish, j'ai créé une colonne "image" où j'ai ajouté le shortcode de chaque pays pour obtenir le drapeau de ce dernier. J'ai aussi ajouté le logo de l'Eurovision en bas, à droite.
 
 <div class="flourish-embed flourish-chart" data-src="visualisation/16447744"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-#### Fichier utilisé pour cette deuxième visualisation
+#### **Fichier utilisé pour cette deuxième visualisation**
 * [CSV de la deuxième visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_DeuxiemeVisualisation.csv).
   
 ## Comment gagner à l'Eurovision ?
 ### Zoom sur les dix derniers gagnants (2012-2023)
 
-On voit donc la dégringolade de la France depuis quelques années au concours (hormis la 2ème place de Barbara Pravi en 2021, et la 6ème place d'Amir en 2015) alors que d'autres pays comme la Suède a gagné de nombreuses fois ces dernières années (2012, 2015 et 2023). Je décide donc de faire un panorama des dix derniers gagnants pour voir s'il y a une tendance qui émane de la dernière décénnie.
+On voit donc au travers de la deuxième visualisation que la France connait une dégringolade depuis quelques années au concours (hormis la 2ème place de Barbara Pravi en 2021, et la 6ème place d'Amir en 2015) alors que d'autres pays, comme la Suède, a gagné de nombreuses fois ce dernier ces dernières années (2012, 2015 et 2023). Je décide donc de faire un panorama des dix derniers gagnants pour voir s'il y a une tendance qui émane (en termes de chanteurs : est-ce que ce sont des hommes qui ont plus gagné ? est-ce que ce sont des femmes ? est-ce que les gagnants sont des groupes ou des artistes solo en majorité ? etc.)
+
+Pour ce faire, je réalise cette visualisation une nouvelle fois sur Flourish. J'y ajoute une nouvelle fois le logo de l'Eurovision et je place le lien de chaque chanson pour que l'utilisateur puisse aller écouter le titre remporté.
 
 <div class="flourish-embed flourish-cards" data-src="visualisation/16447895"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-On remarque que la Suède a gagné trois fois dont deux fois avec la même chanteuse, Loreen : c'était d'ailleurs la première fois qu'une femme remportait deux fois le même concours. On s'aperçoit que hormis la Suède et les Pays Bas, les grandes nations de l'Eurovision ne sont pas représentés. On voit l'émergence d'autres nations, comme l'Italie et Israel qui ont 3 victoires à leur actif (cf. première visualisation).
+On remarque que la Suède a gagné trois fois dont deux fois avec la même chanteuse, Loreen : c'était d'ailleurs la première fois qu'une femme remportait deux fois le concours. On s'aperçoit qu'à l'exception de la Suède et des Pays Bas, les grandes nations de l'Eurovision vues en deuxième visualisation ne sont pas représentés. On voit par ailleurs l'émergence d'autres nations, comme l'Italie et Israel qui ont 3 victoires à leur actif (cf. première visualisation).
 
 On remarque aussi que ce sont en majorité des performances solo qui ont remporté cette dernière décennie le concours et que l'anglais est la langue majoritaire.
 
-#### Fichier utilisé pour cette troisième visualisation
+#### **Fichier utilisé pour cette troisième visualisation**
 * [CSV de la troisième visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_TroisiemeVisualisation.csv).
 
 ### Exploration de différentes pistes (le genre, la langue, artiste solo/groupe etc.) 
