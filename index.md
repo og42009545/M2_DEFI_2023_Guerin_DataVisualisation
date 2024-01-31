@@ -14,7 +14,7 @@ J'ai décidé de travailler sur le **concours de l'Eurovision** (version adulte)
 
 ***Image** : Slimane, représentant de la France pour le concours de l'Eurovision en 2024* / [Source](https://www.francetelevisions.fr/et-vous/notre-tele/a-ne-pas-manquer/lartiste-slimane-portera-les-couleurs-de-la-france-a-leurovision-2024-21456)
 
-[![Clip officiel de la chanson "Mon Amour" de Slimane](https://img.youtube.com/vi/bal8oESDH7s/0.jpg)](https://www.youtube.com/watch?v=bal8oESDH7s)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bal8oESDH7s?si=FHkpcknntncuVDKB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ***Vidéo** : Clip officiel de la chanson "Mon Amour" de Slimane*
 
