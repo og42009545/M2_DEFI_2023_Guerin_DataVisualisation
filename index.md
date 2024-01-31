@@ -12,7 +12,7 @@ J'ai décidé de travailler sur le **concours de l'Eurovision** (version adulte)
 
 ![Photo de Slimane, représentant de la France pour le concours de l'Eurovision en 2024](/images/Eurovision_2024_France_Slimane_MonAmour.jpg)
 
-***Image** : Slimane, représentant de la France pour le concours de l'Eurovision en 2024*
+***Image** : Slimane, représentant de la France pour le concours de l'Eurovision en 2024* / [Source](https://www.francetelevisions.fr/et-vous/notre-tele/a-ne-pas-manquer/lartiste-slimane-portera-les-couleurs-de-la-france-a-leurovision-2024-21456)
 
 [![Clip officiel de la chanson "Mon Amour" de Slimane](https://img.youtube.com/vi/bal8oESDH7s/0.jpg)](https://www.youtube.com/watch?v=bal8oESDH7s)
 
@@ -108,6 +108,7 @@ Mon seul soucis concernait les années où les pays n'ont pas participé à l'Eu
 
 #### **Fichier utilisé pour cette deuxième visualisation**
 * [CSV de la deuxième visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_DeuxiemeVisualisation.csv).
+* [Source logo Eurovision](https://fr.wikipedia.org/wiki/Fichier:Eurovision_Song_Contest_logo_2015.svg).
   
 ## Comment gagner à l'Eurovision ?
 ### Zoom sur les dix derniers gagnants (2012-2023)
@@ -124,6 +125,7 @@ On remarque aussi que ce sont en majorité des performances solo qui ont remport
 
 #### **Fichier utilisé pour cette troisième visualisation**
 * [CSV de la troisième visualisation](/sources/M2_DEFI_2023_Guerin_Eurovision_TroisiemeVisualisation.csv).
+* [Source logo Eurovision](https://fr.wikipedia.org/wiki/Fichier:Eurovision_Song_Contest_logo_2015.svg).
 
 ### Exploration de différentes pistes (le genre, la langue, artiste solo/groupe etc.) 
 
